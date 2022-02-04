@@ -38,6 +38,7 @@ public class VentasApplication {
 			log.info("Creando tipos");
 			tiposIdRepository.save(new tipos_identificaciones("C.C.", "cedula de ciudadania"));
 			tiposIdRepository.save(new tipos_identificaciones("T.I.", "Tarjeta de identidad"));
+			tiposIdRepository.save(new tipos_identificaciones("NIT.", "Numero de identificacion tributaria"));
 		}else {
 			log.info("Ya existen");
 		}		

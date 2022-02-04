@@ -73,5 +73,12 @@ public class ClienteController {
 
 			  return clienteService.updateCliente(id, cliente);
 		  }
+		  
+		  @GetMapping("/clientes/compras")
+		  public List<?> getVendidos(@RequestParam(required = false) String name) {
+			  
+			  
+			  return clienteService.ClientesPorAño();
+		  }
 
 }

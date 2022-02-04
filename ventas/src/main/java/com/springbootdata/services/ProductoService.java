@@ -78,12 +78,9 @@ public class ProductoService {
 				return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
 			}
 	  }
-	  
 	  public List<?> ProductosPorMes(){
 		  
 		  List<?> masVendido = productoRepository.productosMasVendidos();
-		  
-	//	  Set<?> masVendidoPorMes = productoRepository.MasVendidosPorMes(masVendido);
 		  
 		return masVendido;
 		  

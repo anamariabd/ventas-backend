@@ -47,16 +47,16 @@ public class FacturaController {
 		  }		  
 		  /*
 		  
-		  @GetMapping("/productos/{id}")
-		  public Facturas getTutorialById(@PathVariable("id") long id) {
+		  @GetMapping("/facturas/{id}")
+		  public Facturas getFacturaById(@PathVariable("id") long id) {
 			  
-			  Optional <Facturas> tuto = FacturasRepository.findById(id);
+			  Optional <Facturas> fact = FacturasRepository.findById(id);
 			  
 			  if(!tuto.isPresent()) {
 				  return null; 
 			  }
 					  
-		     return tuto.get();
+		     return fact.get();
 		  } */
 
 }

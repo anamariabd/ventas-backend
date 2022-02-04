@@ -80,5 +80,13 @@ public class ClienteService {
 			    }
 			    
 			  }	   
+			  
+			  public List<?> ClientesPorAño(){
+				  
+				  List<?> cliPorAño = clientesRepository.CompraClientesPorAño();
+				  
+				return cliPorAño;
+				  
+			  }
 	   
 }
