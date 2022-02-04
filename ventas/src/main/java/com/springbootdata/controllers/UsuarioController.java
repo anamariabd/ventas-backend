@@ -42,13 +42,13 @@ public class UsuarioController {
 	  }
 	
 	  @GetMapping("/usuario/{user}")
-	  public Usuario getUsuarioByCorreo(@PathVariable("user") String usuario) throws Exception {
+	  public Usuario getUsuarioByUsuario(@PathVariable("user") String usuario) throws Exception {
 				  
 	     return usuarioService.findByUsuario(usuario);
 	  }
 	  
 	  @PutMapping("/usuario/{id}")
-	  public ResponseEntity<Usuario> updateProducto(@PathVariable("id") long id, @RequestBody Usuario usuario) {
+	  public ResponseEntity<Usuario> updateUsuario(@PathVariable("id") long id, @RequestBody Usuario usuario) {
 		 try {
 			return usuarioService.updateUsuario(id, usuario);    		    
 	      } catch (Exception e) {

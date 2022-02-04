@@ -45,7 +45,7 @@ public class FacturaService {
 		  }
 		  
 
-		  public Factura getTutorialById(@PathVariable("id") long id) {
+		  public Factura getFacturaById(@PathVariable("id") long id) {
 			  
 			  Optional <Factura> fact = facturasRepository.findById(id);
 			  
@@ -56,7 +56,7 @@ public class FacturaService {
 		     return fact.get();
 		  } 
 		  
-		  public List<Factura> getFacturByCliente(@PathVariable("cliente") int cliente){
+		  public List<Factura> getFacturByCliente(@PathVariable("cliente") Long cliente){
 			  return facturasRepository.findByCliente(cliente);
 		  }
 		  

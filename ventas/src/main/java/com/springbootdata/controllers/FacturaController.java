@@ -39,7 +39,7 @@ public class FacturaController {
 		  }
 		  
 		  @GetMapping("/facturas/cliente/{id}")
-		  public ResponseEntity<List<Factura>> getTutorialById(@PathVariable("id") int id) {
+		  public ResponseEntity<List<Factura>> getFacturaById(@PathVariable("id") Long id) {
 			  
 			  List<Factura> fact = facturaService.getFacturByCliente(id);
 			  

@@ -10,7 +10,7 @@ import com.springbootdata.entities.Factura;
 @Repository
 public interface FacturaRepository extends JpaRepository<Factura, Long> {
 
-	@Query("select f from Factura f  where f.cliente.cliente = :objId")
-	List<Factura> findByCliente(@Param("objId") int cliente);
+	@Query("select f from Factura f where f.cliente.cliente = :objId")
+	List<Factura> findByCliente(@Param("objId") Long cliente);
 	
 }

@@ -1,6 +1,7 @@
 package com.springbootdata.controllers;
 
 import java.util.List;
+import java.util.Set;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -38,6 +39,13 @@ public class ProductoController {
 	  @GetMapping("/productos")
 	  public List<Producto> getAllProductos(@RequestParam(required = false) String name) {
 		  return productoService.getAllProducts(name);
+	  }
+	  
+	  @GetMapping("/productos/vendidos")
+	  public List<?> getVendidos(@RequestParam(required = false) String name) {
+		  
+		  
+		  return productoService.ProductosPorMes();
 	  }
 	  
 	  @GetMapping("/productos/{id}")

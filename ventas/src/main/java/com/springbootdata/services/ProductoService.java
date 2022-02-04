@@ -2,7 +2,10 @@ package com.springbootdata.services;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -17,6 +20,7 @@ import com.springbootdata.repositories.ProductoRepository;
 @Service
 public class ProductoService {
 
+	private static Logger log = LoggerFactory.getLogger(ProductoService.class);
 	 @Autowired
 	 ProductoRepository productoRepository;
 	 
@@ -73,6 +77,16 @@ public class ProductoService {
 			} catch (Exception e) {
 				return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
 			}
+	  }
+	  
+	  public List<?> ProductosPorMes(){
+		  
+		  List<?> masVendido = productoRepository.productosMasVendidos();
+		  
+	//	  Set<?> masVendidoPorMes = productoRepository.MasVendidosPorMes(masVendido);
+		  
+		return masVendido;
+		  
 	  }
 	  
 	  
